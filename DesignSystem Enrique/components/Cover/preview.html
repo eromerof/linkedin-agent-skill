@@ -1,0 +1,31 @@
+<!-- @dsCard height=360 -->
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+html,body{margin:0;padding:0;background:var(--fondo)}
+.c{position:relative;width:960px;height:360px;overflow:hidden;background:var(--fondo);font-family:var(--font-sora)}
+svg{position:absolute;left:0;top:0;display:block}
+.violeta{fill:var(--violeta)}.negro{fill:var(--negro)}.superficie{fill:var(--superficie)}.divisor{fill:var(--divisor)}
+.num{fill:var(--superficie);font-family:var(--font-sora);font-weight:400;font-size:200px;letter-spacing:-0.03em}
+.nombre{position:absolute;left:48px;bottom:84px;margin:0;color:var(--negro);font-family:var(--font-sora);font-weight:600;font-size:88px;line-height:.95;letter-spacing:-0.01em;width:440px}
+.lema{position:absolute;left:48px;bottom:44px;margin:0;color:var(--negro);font-family:var(--font-sora);font-weight:300;font-size:13px;line-height:20px;width:440px}
+</style></head><body>
+<div class="c">
+<svg width="960" height="360" viewBox="0 0 960 360" role="img" aria-label="Bloques violeta, negro y gris con un 01 recortado">
+<!--
+ bloques: violeta 240×360 (losa alta, 520–760), negro 200×192, divisor 200×40, superficie 200×128 (columna 760–960); cuadrados, sin radios.
+ disposición: una losa violeta alta con tres bloques en columna que sangran por el borde derecho; nada a la izquierda de x=480.
+ patrón: un «01» enorme en superficie recortado por la losa, el número editorial de la marca (número grande + título en violeta).
+ escalas: múltiplos de 8px; solo colores del sistema (violeta, negro, divisor, superficie); sin radios, sin sombras.
+-->
+<defs><clipPath id="losa"><rect x="520" y="0" width="240" height="360"/></clipPath></defs>
+<rect class="violeta" x="520" y="0" width="240" height="360"/>
+<g clip-path="url(#losa)"><text class="num" x="528" y="372">01</text></g>
+<rect class="negro" x="760" y="0" width="200" height="192"/>
+<rect class="divisor" x="760" y="192" width="200" height="40"/>
+<rect class="superficie" x="760" y="232" width="200" height="128"/>
+</svg>
+<p class="nombre">Enrique<br>Romero</p>
+<p class="lema">Soluciones tecnológicas personalizadas</p>
+</div>
+</body></html>

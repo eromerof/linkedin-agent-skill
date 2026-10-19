@@ -1,0 +1,93 @@
+<!-- @dsCard group="Patrones" height=660 width=1560 subtitle="Número grande + título en violeta: el patrón editorial de la marca" -->
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--fondo);color:var(--texto);font-family:var(--font-sora)}
+body{padding:24px}
+.row{display:flex;gap:24px;align-items:flex-start}
+.col{display:flex;flex-direction:column;gap:24px}
+.frame{outline:1px solid var(--divisor);flex:none;position:relative;overflow:hidden}
+.cap{font-family:var(--font-sora);font-size:13px;line-height:18px;font-weight:300;color:var(--negro);margin:0 0 8px}
+.cap b{font-weight:600}
+.cap-w{color:var(--blanco)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:16px;height:60px;padding:0 40px;border:0;border-radius:0;font-family:var(--font-sora);font-size:20px;line-height:20px;font-weight:400;text-transform:none;white-space:nowrap;cursor:pointer;text-decoration:none}
+.btn-primario{background:var(--violeta);color:var(--sobre-acento)}
+.btn-secundario{background:var(--superficie);color:var(--negro)}
+.btn:focus-visible{outline:2px solid var(--negro);outline-offset:3px}
+.flecha{display:block;flex:none}
+/* ---- Post (1080 de ancho) ---- */
+.post{position:relative;width:1080px;background:var(--fondo);color:var(--negro);overflow:hidden;flex:none;font-family:var(--font-sora)}
+.post.sq{height:1080px;--h:107px;--f:107px}
+.post.v{height:1350px;--h:128px;--f:126px}
+.post .regla{position:absolute;left:0;right:0;height:2px;background:var(--negro)}
+.post .regla.sup{top:calc(var(--h) - 1px)}
+.post .regla.inf{bottom:calc(var(--f) - 1px)}
+.post .cab,.post .pie{position:absolute;left:108px;right:108px;display:flex;align-items:center;white-space:pre}
+.post .cab{top:0;height:var(--h)}
+.post .pie{bottom:0;height:var(--f)}
+.post .banda{position:absolute;left:0;right:0;background:var(--violeta);color:var(--blanco)}
+.post .banda.sup{top:0;height:var(--h)}
+.post .banda.inf{bottom:0;height:var(--f)}
+.flecha-boton{display:flex;align-items:center;justify-content:center;width:121px;height:58px;background:var(--violeta);color:var(--blanco)}
+.cuadrado-op{display:flex;align-items:center;justify-content:center;width:129px;height:129px;border:2px solid var(--negro);font-family:var(--font-sora);font-size:24px;line-height:28px;font-weight:400;color:var(--negro);background:transparent}
+.cuadrado-op.si{background:var(--violeta);border-color:var(--violeta);color:var(--blanco)}
+/* ---- A4 (794x1123 px) ---- */
+.a4{position:relative;width:794px;height:1123px;background:var(--fondo);color:var(--negro);overflow:hidden;flex:none;font-family:var(--font-sora)}
+.a4 .regla{position:absolute;left:0;right:0;height:1px;background:var(--negro)}
+.a4 .cab{position:absolute;left:79px;top:53px;white-space:nowrap}
+.a4 .logo-cab{position:absolute;left:523px;top:46px;width:191px;height:auto;display:block}
+.a4 .abs{position:absolute}
+/* ---- Carrusel (post vertical + contador) ---- */
+.post .contador{position:absolute;right:108px;top:0;height:var(--h);display:flex;align-items:center;white-space:pre}
+.car .zona{position:absolute;left:108px;right:108px;top:calc(var(--h) + 72px);bottom:calc(var(--f) + 72px);display:flex;flex-direction:column;gap:44px}
+.car p{margin:0}
+.car .v{color:var(--violeta)}
+.car .barra{border-left:14px solid var(--violeta);background:var(--superficie);padding:36px 40px}
+/* ---- Diapositiva 16:9 (1280x720) ---- */
+.sl{position:relative;width:1280px;height:720px;background:var(--fondo);color:var(--negro);overflow:hidden;flex:none;font-family:var(--font-sora)}
+.sl p{margin:0}
+.sl .tit{position:absolute;left:80px;top:52px;width:900px;color:var(--violeta);margin:0}
+.sl .lk{position:absolute;left:1000px;top:44px;width:200px;height:auto;display:block}
+.sl .pag{position:absolute;right:80px;bottom:36px}
+.sl .abs{position:absolute}
+.sl .v{color:var(--violeta)}
+.sl .card{position:absolute;background:var(--superficie);padding:32px 36px 40px}
+.sl .card::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;background:var(--violeta)}
+.sl .voz{position:absolute;background:var(--superficie);border-left:14px solid var(--violeta);padding:28px 36px}
+
+.c{background:var(--fondo);outline:1px solid var(--divisor);padding:40px}
+.c.sup{background:var(--superficie)}
+.post-c{width:700px;text-align:center}
+.post-c .post-numero,.post-c .post-titular{color:var(--violeta);margin:0}
+.post-c .post-cuerpo{color:#1b1b1b;margin:24px auto 0;max-width:420px;font-size:26px;line-height:36px}
+.a4-c{width:300px}
+.a4-c .a4-numero{color:var(--violeta);margin:0}
+.a4-c .a4-etiqueta{color:var(--violeta);margin:0}
+.a4-c .a4-cuerpo{margin:8px 0 0}
+.a4-c .fase+.fase{margin-top:24px;padding-top:24px;border-top:1px solid var(--negro)}
+.web-c{width:460px}
+.web-c .web-numero{color:var(--violeta);margin:0}
+.web-c .web-titulo{color:var(--violeta);margin:0}
+.web-c .web-cuerpo{margin:12px 0 0}
+</style></head><body>
+<div class="row">
+ <div><p class="cap"><b>Post</b> · centrado, 01. + título (escala reducida)</p>
+ <div class="c post-c">
+  <p class="post-numero" style="font-size:96px;line-height:96px">01.</p>
+  <p class="post-titular" style="font-size:64px;line-height:70px">Mi perspectiva</p>
+  <p class="post-cuerpo">El respeto y la pasión que siento por mi trabajo me impulsan a ofrecer soluciones reales, prácticas y eficaces.</p>
+ </div></div>
+ <div><p class="cap"><b>Propuesta A4</b> · fases</p>
+ <div class="c sup a4-c">
+  <div class="fase"><p class="a4-numero">01</p><p class="a4-etiqueta">CONSULTORÍA</p><p class="a4-cuerpo">Diseño de soluciones personalizadas, análisis de situación, auditoría y diagnóstico… Todo lo que necesitamos para encontrar la mejor solución o mejora.</p></div>
+  <div class="fase"><p class="a4-numero">02</p><p class="a4-etiqueta">DESARROLLO</p><p class="a4-cuerpo">Se despliega la solución en el entorno de producción. Cada paso de este proceso se gestiona meticulosamente a través de Azure DevOps.</p></div>
+ </div></div>
+ <div><p class="cap"><b>Web</b> · servicio numerado</p>
+ <div class="c web-c">
+  <p class="web-numero">01.</p>
+  <p class="web-titulo">Consultoría</p>
+  <p class="web-cuerpo">Diseño de soluciones personalizadas, análisis de situación, auditoría y diagnóstico.</p>
+ </div></div>
+</div>
+</body></html>
