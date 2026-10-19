@@ -43,13 +43,21 @@ O como plugin:
 ```
 
 En claude.ai o Claude Desktop (que no pueden leer un repositorio privado),
-sube las skills una a una desde Ajustes → Capacidades → Skills con los zips de
-[`dist/`](dist/), uno por skill. Activa también la ejecución de código, que
-`li-human` necesita para sus scripts. Si cambias alguna skill, regenera los
-zips desde la raíz del repositorio:
+usa los zips de [`dist/`](dist/):
+
+- **`linkedin-agent.zip`**: el plugin completo, con las 11 skills y su
+  `.claude-plugin/plugin.json`. Súbelo como plugin y lo tienes todo de una vez.
+- **`li-*.zip`**: una skill por zip, con el `SKILL.md` en la raíz, por si
+  prefieres instalar solo algunas desde Ajustes → Capacidades → Skills.
+
+Activa también la ejecución de código, que `li-human` necesita para sus
+scripts. Si cambias alguna skill, regenera los zips desde la raíz del
+repositorio:
 
 ```bash
-cd skills && for d in li-*; do rm -f ../dist/$d.zip; zip -qr ../dist/$d.zip $d -x "*/__pycache__/*" "*.DS_Store"; done
+rm -f dist/*.zip
+zip -qr dist/linkedin-agent.zip .claude-plugin/plugin.json skills templates README.md LICENSE -x "*/__pycache__/*" "*.DS_Store"
+cd skills && for d in li-*; do (cd $d && zip -qr ../../dist/$d.zip . -x "__pycache__/*" "*.DS_Store"); done
 ```
 
 Para un solo proyecto en vez de global, copia las mismas carpetas en
@@ -218,7 +226,8 @@ skills/li-human/humanize.py      las tres pasadas de limpieza
 skills/li-human/detect.py        el panel de cinco pruebas
 skills/li-profile/rubric.json    la nota del perfil sobre 100
 templates/voice.md               tu perfil de voz. Rellénalo primero.
-dist/li-*.zip                    una skill por zip, para subir a claude.ai o Claude Desktop
+dist/linkedin-agent.zip          el plugin completo, para subir de una vez a claude.ai o Claude Desktop
+dist/li-*.zip                    una skill por zip, con el SKILL.md en la raíz
 ```
 
 ## Créditos
