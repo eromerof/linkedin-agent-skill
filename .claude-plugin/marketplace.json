@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "linkedin-agent",
-      "description": "Once skills de Claude para llevar una cuenta de LinkedIn en español, con un humanizador que quita la huella de IA y puntúa el borrador con un panel de cinco pruebas.",
+      "description": "Doce skills de Claude para llevar una cuenta de LinkedIn en español, con un humanizador que quita la huella de IA y puntúa el borrador con un panel de cinco pruebas.",
       "source": "./",
       "category": "productivity",
       "homepage": "https://github.com/eromerof/linkedin-agent-skill"

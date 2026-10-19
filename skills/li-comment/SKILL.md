@@ -18,9 +18,11 @@ autor.
 ## Entrada
 
 El usuario pega el texto del post (y el nombre y cargo del autor si los
-tiene). Si pega una captura, léela. Si te da una URL que no puedes abrir, pídele
-que pegue el texto. No adivines lo que decía el post y no uses automatización
-del navegador para leer el feed.
+tiene). Si pega una captura, léela. Si los posts vienen de `/li-prospect`, ya
+tienes el texto, el autor y el motivo: úsalos. Si te da una URL que no puedes
+abrir, pídele que pegue el texto. No adivines lo que decía el post y no
+recorras el feed con el navegador desde esta skill: buscar es trabajo de
+`/li-prospect`, que lo hace con límites.
 
 ## Los nueve tipos de comentario
 

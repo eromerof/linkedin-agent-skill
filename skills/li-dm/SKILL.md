@@ -28,6 +28,9 @@ Si no hay ningún motivo concreto para escribir hoy a esta persona, dilo. Un
 mensaje sin motivo es lo que manda todo el mundo, y por eso les contesta el
 2 %.
 
+Si la persona viene de `/li-prospect`, el motivo y el contexto ya están en su
+ficha: no vuelvas a preguntarlos.
+
 ## Registro
 
 En LinkedIn España **se tutea**, también en B2B: tecnología, consultoría,

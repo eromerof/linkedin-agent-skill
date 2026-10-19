@@ -85,6 +85,9 @@ Haz una lista de 10, repartida en tres:
 20 minutos al día, antes de publicar, no después. Los comentarios en posts de
 otros son lo que hace que el post propio funcione.
 
+Si el usuario no tiene la lista o se le ha quedado vieja, `/li-prospect` la
+llena con candidatos reales de esta semana, buscados con Claude en Chrome.
+
 ## Salida
 
 ```

@@ -1,6 +1,6 @@
 {
   "name": "linkedin-agent",
-  "description": "Once skills de Claude para llevar una cuenta de LinkedIn en español: posts con 21 fórmulas de gancho, comentarios, respuestas, nota del perfil, plan semanal, mensajes, bandeja de entrada, carruseles, reaprovechamiento, auditorías y un humanizador que quita la huella de IA en español y puntúa el borrador antes de que salga.",
+  "description": "Doce skills de Claude para llevar una cuenta de LinkedIn en español: posts con 21 fórmulas de gancho, comentarios, respuestas, nota del perfil, plan semanal, mensajes, bandeja de entrada, carruseles, reaprovechamiento, auditorías, búsqueda de clientes con Claude en Chrome y un humanizador que quita la huella de IA en español y puntúa el borrador antes de que salga.",
   "version": "1.0.0-es",
   "author": {
     "name": "Jake Schincariol (original), adaptación al español de eromerof",

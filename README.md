@@ -1,6 +1,6 @@
 # La skill de LinkedIn para agentes, en español
 
-Once skills de Claude para llevar una cuenta de LinkedIn **en español**. Sin
+Doce skills de Claude para llevar una cuenta de LinkedIn **en español**. Sin
 registro, sin clave de API, nada que conectar.
 
 No es una traducción. Es una adaptación del
@@ -13,7 +13,8 @@ escritos para este público.
 Una skill escribe tus posts a partir de 21 fórmulas de gancho. Otra comenta en
 posts ajenos. Otra gestiona las respuestas bajo los tuyos. Otra puntúa tu
 perfil sobre 100 y reescribe lo que pierde puntos. Otra planifica la semana:
-qué publicar, cuándo y con quién interactuar.
+qué publicar, cuándo y con quién interactuar. Otra busca en LinkedIn, con
+Claude en Chrome, posibles clientes y posts donde comentar.
 
 Y una es el humanizador, que es lo que hace que el resto se pueda usar. Quita
 las rayas, el vocabulario de plantilla ("sumergirse en", "poner en valor",
@@ -45,7 +46,7 @@ O como plugin:
 En claude.ai o Claude Desktop (que no pueden leer un repositorio privado),
 usa los zips de [`dist/`](dist/):
 
-- **`linkedin-agent.zip`**: el plugin completo, con las 11 skills y su
+- **`linkedin-agent.zip`**: el plugin completo, con las 12 skills y su
   `.claude-plugin/plugin.json`. Súbelo como plugin y lo tienes todo de una vez.
 - **`li-*.zip`**: una skill por zip, con el `SKILL.md` en la raíz, por si
   prefieres instalar solo algunas desde Ajustes → Capacidades → Skills.
@@ -72,7 +73,7 @@ di "escríbeme el voice.md a partir de estos". Ahí se fija también la variante
 del español (España, México, Argentina...) y si tuteas o no. Todas las skills
 leen ese archivo. Si te lo saltas, todo sale sonando como todo el mundo.
 
-## Las once
+## Las doce
 
 | comando | qué hace |
 | --- | --- |
@@ -87,6 +88,7 @@ leen ese archivo. Si te lo saltas, todo sale sonando como todo el mundo.
 | `/li-dm` | La nota de invitación de 200 caracteres, el primer mensaje y los dos seguimientos. Dos. |
 | `/li-inbox` | Ordena la bandeja en cliente / reclutador / colega / petición / spam, y te dice qué detalle delató la secuencia automática. |
 | `/li-audit` | Autopsia de lo que ya has publicado. Ordena por tasa de interacción y múltiplo de alcance, no por impresiones. |
+| `/li-prospect` | Busca con Claude en Chrome, en tu sesión y a ritmo humano, posibles clientes y posts recientes donde comentar, según tu [cliente ideal](skills/li-prospect/cliente-ideal.md). Devuelve 10-15 candidatos con el motivo y la acción. No escribe nada en LinkedIn. |
 
 ## El humanizador
 
@@ -199,6 +201,15 @@ bloque listo para copiar, y lo pegas tú. No es una limitación añadida despué
 es el diseño. Y es lo que hace que la puerta de aprobación sea real y no una
 opción de configuración.
 
+**`/li-prospect` sí abre LinkedIn, y eso tiene riesgo.** Lee búsquedas y posts
+con Claude en Chrome, dentro de tu propia sesión. Las Condiciones de uso de
+LinkedIn prohíben los bots y la extracción automatizada, así que la skill
+trabaja como lo harías tú: una sesión al día, 3 búsquedas, 40 posts y 15
+perfiles como mucho, sin exportar nada y parando ante cualquier captcha o
+aviso. Aun así, el riesgo no es cero, y la decisión de usarla es tuya. Lo
+único que nunca hace es escribir en LinkedIn: comentar, conectar, enviar o
+publicar sigue siendo un clic tuyo.
+
 **Las cinco pruebas son heurísticas locales, no APIs de detectores.** Están
 basadas en las señales en las que se fijan los detectores públicos y se
 ejecutan enteras en tu máquina. No son GPTZero, Originality, Copyleaks,
@@ -225,6 +236,7 @@ skills/li-human/slop.json        el léxico: ~360 términos, 17 clases de invisi
 skills/li-human/humanize.py      las tres pasadas de limpieza
 skills/li-human/detect.py        el panel de cinco pruebas
 skills/li-profile/rubric.json    la nota del perfil sobre 100
+skills/li-prospect/cliente-ideal.md   a quién busca /li-prospect. Revísalo.
 templates/voice.md               tu perfil de voz. Rellénalo primero.
 dist/linkedin-agent.zip          el plugin completo, para subir de una vez a claude.ai o Claude Desktop
 dist/li-*.zip                    una skill por zip, con el SKILL.md en la raíz
