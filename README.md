@@ -42,6 +42,16 @@ O como plugin:
 /plugin install linkedin-agent
 ```
 
+En claude.ai o Claude Desktop (que no pueden leer un repositorio privado),
+sube las skills una a una desde Ajustes → Capacidades → Skills con los zips de
+[`dist/`](dist/), uno por skill. Activa también la ejecución de código, que
+`li-human` necesita para sus scripts. Si cambias alguna skill, regenera los
+zips desde la raíz del repositorio:
+
+```bash
+cd skills && for d in li-*; do rm -f ../dist/$d.zip; zip -qr ../dist/$d.zip $d -x "*/__pycache__/*" "*.DS_Store"; done
+```
+
 Para un solo proyecto en vez de global, copia las mismas carpetas en
 `.claude/skills/` dentro del repositorio. ¿Sin Claude Code? Pega cualquier
 `SKILL.md` al principio de un chat y funciona como un modo: pierdes las dos
@@ -208,6 +218,7 @@ skills/li-human/humanize.py      las tres pasadas de limpieza
 skills/li-human/detect.py        el panel de cinco pruebas
 skills/li-profile/rubric.json    la nota del perfil sobre 100
 templates/voice.md               tu perfil de voz. Rellénalo primero.
+dist/li-*.zip                    una skill por zip, para subir a claude.ai o Claude Desktop
 ```
 
 ## Créditos
