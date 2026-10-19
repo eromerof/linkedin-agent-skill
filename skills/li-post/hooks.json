@@ -1,181 +1,183 @@
 {
-  "version": "1.0",
-  "note": "21 hook formulas. Line 1 of a LinkedIn post is the whole game - the feed truncates at roughly 210 characters on desktop and 140 on mobile before 'see more', so the hook has to survive alone. Every formula here has a template, a filled example, what it is for, and the way it usually gets ruined.",
+  "version": "1.0-es",
+  "note": "21 fórmulas de gancho para LinkedIn en español. La primera línea lo es todo: el feed corta más o menos a los 210 caracteres en escritorio y a los 140 en el móvil antes del \"...más\", así que el gancho tiene que sostenerse solo. El español ocupa un 15-20 % más que el inglés: recorta palabras, no ideas. Cada fórmula trae plantilla, ejemplo, para qué sirve y cómo se suele estropear.",
   "rules": [
-    "One idea per hook. If it needs a comma splice, it needs two posts.",
-    "Line 2 is not a hook, it is the payoff of line 1. Never waste it on setup.",
-    "No question marks in line 1 unless the question is specific enough that only you could ask it.",
-    "Numbers beat adjectives. '$4,200' beats 'a lot of money' every time.",
-    "If the hook works with any other person's name on it, it is not your hook."
+    "Una idea por gancho. Si necesita dos frases unidas por coma, son dos posts.",
+    "La segunda línea no es otro gancho, es el pago de la primera. Nunca la gastes en preparar.",
+    "Nada de preguntas en la primera línea salvo que sea tan concreta que solo tú podrías hacerla.",
+    "Las cifras ganan a los adjetivos. \"4.200 €\" gana a \"un dineral\" siempre. Formato español: punto de miles, coma decimal, € detrás.",
+    "Si el gancho funciona con el nombre de otra persona, no es tu gancho.",
+    "Nada de clichés de LinkedIn España en la primera línea: \"Hoy os quiero contar\", \"Spoiler:\", \"Lo que nadie te cuenta\", \"Feliz de anunciar\". Son invisibles.",
+    "Tutea. En LinkedIn España el tuteo es lo normal incluso en B2B; el \"usted\" suena a carta del banco."
   ],
   "hooks": [
     {
       "id": 1,
-      "name": "Contrarian Take",
-      "template": "Everyone says {common advice}. After {specific experience}, I think that is wrong.",
-      "example": "Everyone says post daily. I posted 4x a week for a year and beat every daily poster in my niche.",
-      "best_for": "Establishing a point of view. Highest comment rate of any formula.",
-      "trap": "Being contrarian about something nobody believes. The belief has to be genuinely common."
+      "name": "Opinión a contracorriente",
+      "template": "Todo el mundo dice {consejo habitual}. Después de {experiencia concreta}, creo que se equivocan.",
+      "example": "Todo el mundo dice que publiques a diario. Publiqué 4 días por semana durante un año y gané a los que publicaban a diario.",
+      "best_for": "Fijar una postura propia. Es la fórmula que más comentarios genera.",
+      "trap": "Ir a contracorriente de algo que nadie cree. La creencia tiene que ser común de verdad, no un hombre de paja."
     },
     {
       "id": 2,
-      "name": "Number Reveal",
-      "template": "I {did thing} for {N} {days/weeks}. Here is what actually happened.",
-      "example": "I sent 400 cold DMs in 30 days. 11 replied. 2 became clients.",
-      "best_for": "Experiments, challenges, anything with a countable result.",
-      "trap": "Burying the number. Put it in line 1 or the formula does nothing."
+      "name": "La cifra",
+      "template": "Hice {cosa} durante {N} {días/semanas}. Esto es lo que pasó de verdad.",
+      "example": "Mandé 400 mensajes en frío en 30 días. Contestaron 11. 2 acabaron siendo clientes.",
+      "best_for": "Experimentos, retos, cualquier cosa con un resultado que se pueda contar.",
+      "trap": "Esconder la cifra. Si no está en la primera línea, la fórmula no hace nada."
     },
     {
       "id": 3,
-      "name": "Mistake Confession",
-      "template": "{Specific cost} is what {one mistake} cost me.",
-      "example": "$18,000 is what not having a contract cost me last March.",
-      "best_for": "Trust. People forward the posts where you look bad.",
-      "trap": "A fake-humble mistake. 'I care too much' reads as a brag and kills the post."
+      "name": "La confesión del error",
+      "template": "{Coste concreto} es lo que me costó {un error}.",
+      "example": "18.000 € es lo que me costó no tener contrato el pasado marzo.",
+      "best_for": "Confianza. La gente comparte los posts en los que quedas mal.",
+      "trap": "El falso error humilde. \"Me implico demasiado\" se lee como presumir y mata el post."
     },
     {
       "id": 4,
-      "name": "Before / After",
-      "template": "{Time ago} I was {low state}. Today I {high state}. The difference was {one thing}.",
-      "example": "18 months ago I was writing proposals at 2am. Today I send them in 6 minutes. One template did it.",
-      "best_for": "Proof you have travelled the distance your reader wants to travel.",
-      "trap": "Three-part transformations. Name one lever or the reader stops believing you."
+      "name": "Antes y después",
+      "template": "Hace {tiempo} {situación mala}. Hoy {situación buena}. La diferencia fue {una sola cosa}.",
+      "example": "Hace 18 meses preparaba presupuestos a las 2 de la mañana. Hoy los mando en 6 minutos. Fue una plantilla.",
+      "best_for": "Demostrar que ya has recorrido el camino que tu lector quiere recorrer.",
+      "trap": "Transformaciones con tres causas. Nombra una sola palanca o el lector deja de creerte."
     },
     {
       "id": 5,
-      "name": "The List Promise",
-      "template": "{N} things I wish someone had told me before {milestone}.",
-      "example": "7 things I wish someone had told me before I hired my first employee.",
-      "best_for": "Saves. Highest save rate of the 21, which LinkedIn weights heavily.",
-      "trap": "N above 10. The reader does not believe you have 15 good ones, and you do not."
+      "name": "La lista prometida",
+      "template": "{N} cosas que me habría gustado saber antes de {hito}.",
+      "example": "7 cosas que me habría gustado saber antes de contratar a mi primer empleado.",
+      "best_for": "Guardados. Es la fórmula con más guardados de las 21, y LinkedIn los pesa mucho.",
+      "trap": "Pasar de 10. Nadie se cree que tengas 15 buenas, y tú tampoco las tienes."
     },
     {
       "id": 6,
-      "name": "Insider Secret",
-      "template": "After {N} years {doing thing}, here is the part nobody puts in the {job posting/course/pitch}.",
-      "example": "After 9 years in agency sales, here is the part nobody puts in the job posting.",
-      "best_for": "Credentialed takes. Works only if the years are real.",
-      "trap": "Promising a secret and delivering common knowledge. The comments will say so."
+      "name": "Lo que no sale en la oferta",
+      "template": "Después de {N} años {haciendo algo}, esta es la parte que nadie pone en {la oferta de empleo/el curso/la propuesta}.",
+      "example": "Después de 9 años vendiendo para agencias, esta es la parte que nadie pone en la oferta de empleo.",
+      "best_for": "Opiniones con credenciales. Solo funciona si los años son reales.",
+      "trap": "Prometer un secreto y entregar algo que sabe todo el mundo. Te lo dirán en los comentarios."
     },
     {
       "id": 7,
-      "name": "The Callout",
-      "template": "If you are still {doing outdated thing}, stop.",
-      "example": "If you are still writing your LinkedIn posts in the LinkedIn composer, stop.",
-      "best_for": "Short posts with one instruction. Fastest to write of the 21.",
-      "trap": "Calling out something nobody does. Or worse, calling out your own audience with contempt."
+      "name": "El aviso directo",
+      "template": "Si sigues {haciendo algo anticuado}, para.",
+      "example": "Si sigues escribiendo tus posts directamente en la caja de LinkedIn, para.",
+      "best_for": "Posts cortos con una sola instrucción. La más rápida de escribir de las 21.",
+      "trap": "Avisar de algo que no hace nadie. O peor, hablarle con desprecio a tu propio público."
     },
     {
       "id": 8,
-      "name": "Question Trap",
-      "template": "{Specific scenario with a real cost}. What do you do?",
-      "example": "Your best client asks for a 40% discount and hints they will leave without it. What do you do?",
-      "best_for": "Comment volume. People answer scenarios, they ignore 'thoughts?'.",
-      "trap": "A question with an obvious right answer. There has to be a real fork."
+      "name": "La pregunta trampa",
+      "template": "{Escenario concreto con un coste real}. ¿Qué haces?",
+      "example": "Tu mejor cliente te pide un 40 % de descuento y deja caer que se va si no se lo das. ¿Qué haces?",
+      "best_for": "Volumen de comentarios. La gente responde a escenarios; ignora el \"¿qué opinas?\".",
+      "trap": "Una pregunta con una respuesta obvia. Tiene que haber una disyuntiva real."
     },
     {
       "id": 9,
-      "name": "Story Cold Open",
-      "template": "\"{Line of dialogue}\"\\n\\n{Who said it, when, and why it mattered}.",
-      "example": "\"We are going with someone cheaper.\"\\n\\nThat email arrived 40 minutes after I sent my best proposal of the year.",
-      "best_for": "Long-form storytelling posts. Highest dwell time.",
-      "trap": "Dialogue nobody would actually say. Use the real line, including the ugly parts."
+      "name": "Arranque en frío",
+      "template": "\"{Frase literal}\"\n\n{Quién la dijo, cuándo y por qué importó}.",
+      "example": "\"Nos vamos con alguien más barato.\"\n\nEse correo llegó 40 minutos después de mandar mi mejor propuesta del año.",
+      "best_for": "Posts largos que cuentan una historia. Los que más tiempo de lectura retienen.",
+      "trap": "Diálogo que nadie diría. Usa la frase real, con sus partes feas."
     },
     {
       "id": 10,
-      "name": "The Receipt",
-      "template": "{Screenshot or hard number}. {One sentence of context}.",
-      "example": "3 clients, 11 days, zero calls booked. Here is the exact sequence that did it.",
-      "best_for": "Anything you can prove. Pair with an image and reach roughly doubles.",
-      "trap": "A receipt with no story attached. The number opens the door, the story is the room."
+      "name": "El recibo",
+      "template": "{Captura o cifra dura}. {Una frase de contexto}.",
+      "example": "3 clientes, 11 días, cero llamadas. Esta es la secuencia exacta que lo consiguió.",
+      "best_for": "Cualquier cosa que puedas demostrar. Con una imagen al lado, el alcance suele duplicarse.",
+      "trap": "Un recibo sin historia. La cifra abre la puerta; la historia es la habitación."
     },
     {
       "id": 11,
-      "name": "Myth Bust",
-      "template": "{Popular explanation} is not why {bad outcome} is happening to you.",
-      "example": "The algorithm is not why your posts are dying.",
-      "best_for": "Reframing. Sets you up to deliver the real cause in line 3.",
-      "trap": "Busting the myth and never naming the replacement. Always name it."
+      "name": "Desmontar el mito",
+      "template": "{Explicación popular} no es la razón por la que {mal resultado}.",
+      "example": "El algoritmo no es la razón por la que tus posts no llegan a nadie.",
+      "best_for": "Reencuadrar. Te deja servida la causa real para la tercera línea.",
+      "trap": "Desmontar el mito y no decir nunca cuál es la causa real. Dila siempre."
     },
     {
       "id": 12,
-      "name": "The Comparison",
-      "template": "{Expensive option} vs {cheap option}. {Surprising verdict}.",
-      "example": "A $12,000 brand agency vs a $20 tool and a weekend. The weekend won.",
-      "best_for": "Tool and process posts. Very high share rate.",
-      "trap": "An unfair comparison. Concede what the expensive option genuinely does better."
+      "name": "La comparación",
+      "template": "{Opción cara} frente a {opción barata}. {Veredicto sorprendente}.",
+      "example": "Una agencia de marca de 12.000 € frente a una herramienta de 20 € y un fin de semana. Ganó el fin de semana.",
+      "best_for": "Posts de herramientas y procesos. Se comparten muchísimo.",
+      "trap": "Una comparación injusta. Reconoce lo que la opción cara hace mejor de verdad."
     },
     {
       "id": 13,
-      "name": "Permission Slip",
-      "template": "You are allowed to {thing the reader feels guilty about}.",
-      "example": "You are allowed to turn down work that pays well and makes you miserable.",
-      "best_for": "Reach beyond your niche. These travel further than tactical posts.",
-      "trap": "Generic self-care. It has to be specific to the working life of your reader."
+      "name": "El permiso",
+      "template": "Tienes permiso para {algo que al lector le da culpa}.",
+      "example": "Tienes permiso para rechazar un proyecto que paga bien y te amarga la vida.",
+      "best_for": "Llegar más allá de tu nicho. Viajan más lejos que los posts tácticos.",
+      "trap": "Autoayuda genérica. Tiene que ser concreto de la vida laboral de tu lector."
     },
     {
       "id": 14,
-      "name": "Pattern Interrupt",
-      "template": "{One word or three-word line, full stop.}",
-      "example": "I got fired.",
-      "best_for": "Stopping the scroll cold. Whitespace does the work.",
-      "trap": "Overuse. Once a month. Every post starting this way reads as a tic."
+      "name": "La frase seca",
+      "template": "{Una línea de dos a cuatro palabras, punto.}",
+      "example": "Me despidieron un martes.",
+      "best_for": "Parar el scroll en seco. El espacio en blanco hace el trabajo.",
+      "trap": "Abusar de ella. Una vez al mes. Si todos tus posts empiezan así, se convierte en un tic."
     },
     {
       "id": 15,
-      "name": "The Warning",
-      "template": "{Common practice} is quietly costing you {specific thing they care about}.",
-      "example": "Your 'quick call to align' is quietly costing you six hours a week.",
-      "best_for": "Problem-aware audiences who have not connected cause to cost.",
-      "trap": "Fear with no exit. Give the fix in the same post or you have just made someone anxious."
+      "name": "La advertencia",
+      "template": "{Práctica habitual} te está costando, sin que te des cuenta, {algo concreto que le importa}.",
+      "example": "Tu \"llamada rápida para alinearnos\" te está costando 6 horas a la semana.",
+      "best_for": "Públicos que ya sienten el problema pero no lo han conectado con el coste.",
+      "trap": "Meter miedo sin salida. Da la solución en el mismo post o solo habrás agobiado a alguien."
     },
     {
       "id": 16,
-      "name": "Good vs Great",
-      "template": "Good {role} {do X}. Great {role} {do Y}.",
-      "example": "Good salespeople answer the question. Great salespeople ask why it was asked.",
-      "best_for": "Quotable one-liners. Screenshot bait.",
-      "trap": "A distinction that is really just 'try harder'. Y has to be a different action, not more effort."
+      "name": "Bueno frente a excelente",
+      "template": "Un buen {rol} {hace X}. Uno excelente {hace Y}.",
+      "example": "Un buen comercial responde a la pregunta. Uno excelente pregunta por qué se la han hecho.",
+      "best_for": "Frases citables. Cebo de captura de pantalla.",
+      "trap": "Una diferencia que en realidad es \"esfuérzate más\". Y tiene que ser otra acción, no más esfuerzo."
     },
     {
       "id": 17,
-      "name": "Time Anchor",
-      "template": "{Task} used to take me {long time}. It now takes {short time}.",
-      "example": "Writing a week of posts used to take me 5 hours. It now takes 20 minutes.",
-      "best_for": "Tool, system and automation posts. The strongest hook shape for a how-to.",
-      "trap": "An unbelievable ratio. 5 hours to 20 minutes lands. 5 hours to 8 seconds does not."
+      "name": "El ancla de tiempo",
+      "template": "{Tarea} me llevaba {mucho tiempo}. Ahora me lleva {poco tiempo}.",
+      "example": "Escribir los posts de la semana me llevaba 5 horas. Ahora me lleva 20 minutos.",
+      "best_for": "Posts de herramientas, sistemas y automatizaciones. La forma más fuerte para un post práctico.",
+      "trap": "Una proporción increíble. De 5 horas a 20 minutos se cree. De 5 horas a 8 segundos, no."
     },
     {
       "id": 18,
-      "name": "The Unpopular Rule",
-      "template": "I do not {widely accepted practice}. Ever. Here is why.",
-      "example": "I do not take discovery calls. Ever.",
-      "best_for": "Positioning. Attracts the right clients by repelling the wrong ones.",
-      "trap": "A rule you break constantly. Someone in the comments will know."
+      "name": "La regla impopular",
+      "template": "No {práctica aceptada por todos}. Nunca. Te explico por qué.",
+      "example": "No hago llamadas de descubrimiento. Nunca.",
+      "best_for": "Posicionarte. Atrae a los clientes buenos espantando a los malos.",
+      "trap": "Una regla que te saltas constantemente. Alguien en los comentarios lo sabrá."
     },
     {
       "id": 19,
-      "name": "Curiosity Gap",
-      "template": "The {superlative} {thing} I ever {verb} {broke the obvious rule}.",
-      "example": "The best hire I ever made failed the interview.",
-      "best_for": "Openers that force the 'see more' tap.",
-      "trap": "A gap you never close. Pay it off by line 4 or you have written clickbait."
+      "name": "El hueco de curiosidad",
+      "template": "{El/La} {superlativo} {cosa} que he {verbo} {rompía la regla obvia}.",
+      "example": "La mejor contratación que he hecho suspendió la entrevista.",
+      "best_for": "Primeras líneas que obligan a pulsar \"...más\".",
+      "trap": "Un hueco que nunca cierras. Resuélvelo antes de la cuarta línea o habrás escrito un ciberanzuelo."
     },
     {
       "id": 20,
-      "name": "The Walk-Away",
-      "template": "I {fired/quit/deleted/cancelled} {valuable thing}. {Result}.",
-      "example": "I fired my highest-paying client in January. Revenue is up 30%.",
-      "best_for": "Values posts with a business result attached. Very high engagement.",
-      "trap": "Walking away with no cost. Name what it actually cost you or it reads as theatre."
+      "name": "Me fui",
+      "template": "{Despedí/Dejé/Borré/Cancelé} {algo valioso}. {Resultado}.",
+      "example": "En enero despedí a mi cliente que más pagaba. La facturación ha subido un 30 %.",
+      "best_for": "Posts de valores con un resultado de negocio detrás. Mucha interacción.",
+      "trap": "Irte sin que te cueste nada. Di lo que te costó de verdad o sonará a teatro."
     },
     {
       "id": 21,
-      "name": "The Direct Value",
-      "template": "Here is the exact {artifact} I used to {specific outcome}. Steal it.",
-      "example": "Here is the exact 4-line email I used to reopen 3 dead deals. Steal it.",
-      "best_for": "Lead magnets and comment-for-link posts. Highest conversion of the 21.",
-      "trap": "Making them ask for something you could have just posted. Give the artifact away in the post."
+      "name": "El regalo directo",
+      "template": "Aquí tienes {el recurso} exacto que usé para {resultado concreto}. Cógelo.",
+      "example": "Aquí tienes el correo de 4 líneas que usé para reabrir 3 ventas muertas. Cógelo.",
+      "best_for": "Captación y posts de \"comenta y te lo mando\". La fórmula que más convierte de las 21.",
+      "trap": "Obligar a pedir algo que podías haber puesto en el post. Regala el recurso en el propio post."
     }
   ]
 }

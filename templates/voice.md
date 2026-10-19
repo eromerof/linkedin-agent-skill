@@ -1,52 +1,57 @@
 # voice.md
 
-Copy this to `~/.claude/linkedin/voice.md` and fill it in. Every skill in the
-pack reads it. Ten minutes here is the difference between drafts you post and
-drafts you rewrite.
+Copia esto en `~/.claude/linkedin/voice.md` y rellénalo. Todas las skills del
+paquete lo leen. Diez minutos aquí son la diferencia entre borradores que
+publicas y borradores que reescribes.
 
-If you would rather not fill it in by hand, paste three of your own posts into
-Claude and say "write my voice.md from these". That works better than guessing
-at the answers.
+Si prefieres no rellenarlo a mano, pega tres posts tuyos en Claude y di
+"escríbeme el voice.md a partir de estos". Funciona mejor que adivinar las
+respuestas.
 
 ---
 
-## Who I am
+## Quién soy
 
-- **Name:**
-- **What I do, in one sentence:**
-- **Who I am writing for:** (be specific: "agency owners doing $1-5M", not "professionals")
-- **What I sell:**
+- **Nombre:**
+- **A qué me dedico, en una frase:**
+- **Para quién escribo:** (concreto: "dueños de agencias que facturan entre 1 y 5 M€", no "profesionales")
+- **Qué vendo:**
+- **Dónde está mi público:** (España / Latinoamérica: qué países / mixto)
 
-## What I sound like
+## Cómo hablo
 
-- **Three of my own posts that sound most like me:** (paste them, or link them)
-- **Words I actually use:**
-- **Words I would never use:**
-- **Sentence length:** (short and punchy / mixed / long and considered)
-- **Do I swear:** (yes / mild / no)
-- **Emoji:** (never / one, rarely / freely)
-- **Contractions:** (yes - almost always yes)
+- **Variante del español:** (España, por defecto / México / Argentina / Colombia / neutro)
+- **Tú, vosotros, usted o ustedes:** (tuteo y "vosotros" es lo normal en LinkedIn España, incluso en B2B)
+- **Tres posts míos que suenan más a mí:** (pégalos o enlázalos)
+- **Palabras y expresiones que sí uso:** (los coloquialismos cuentan: "currar", "un montón", "ojo", "vale"...)
+- **Palabras que no usaría nunca:** (si alguna está en `slop.json` y sí la usas, bórrala de ahí)
+- **Anglicismos de mi sector que sí uso:** (SaaS, onboarding, churn, pipeline... los que de verdad dice tu público)
+- **Longitud de frase:** (corta y directa / mezcla / larga y pensada)
+- **¿Digo tacos?:** (sí / suaves / no)
+- **Emojis:** (nunca / uno, de vez en cuando / sin problema)
+- **¿Uso ¿ y ¡ de apertura?:** (sí, siempre, casi todo el mundo en LinkedIn los pone)
 
-## My positions
+## Mis posturas
 
-Three to five things I believe that some of my audience does not. These are
-where the good posts come from.
+De tres a cinco cosas que creo y con las que parte de mi público no está de
+acuerdo. De aquí salen los buenos posts.
 
 1.
 2.
 3.
 
-## Off limits
+## Fuera de límites
 
-- **Topics I do not post about:**
-- **Clients or numbers I cannot name publicly:**
-- **Claims I am not allowed to make:** (regulated industry, employer policy, NDA)
+- **Temas de los que no publico:**
+- **Clientes o cifras que no puedo nombrar en público:**
+- **Afirmaciones que no puedo hacer:** (sector regulado, política de empresa, acuerdo de confidencialidad)
 
-## Proof I can use
+## Pruebas que puedo usar
 
-Real numbers, outcomes and stories I am happy to put my name on. The skills
-will never invent one, so if this section is empty, every draft comes back
-with `{{your number}}` in it.
+Cifras, resultados e historias reales que estoy dispuesto a firmar, en formato
+español (4.200 €, un 35 %, 12 de marzo). Las skills no se inventarán nunca
+ninguna, así que si esta sección está vacía, cada borrador volverá con
+`{{tu cifra}}` dentro.
 
 -
 -

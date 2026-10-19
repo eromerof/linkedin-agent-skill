@@ -1,83 +1,111 @@
 ---
 name: li-dm
 description: >-
-  Write connection notes and DM follow-ups that get replies - the 200-character
-  invite, the first message, and the two follow-ups. Use when the user says
-  "write a connection request", "DM this person", "outreach message", "how do I
-  follow up", or is reaching out to someone specific on LinkedIn.
+  Escribe en español notas de invitación y mensajes privados de LinkedIn que
+  reciben respuesta: la nota de 200 caracteres, el primer mensaje y los dos
+  seguimientos. Úsala cuando el usuario diga "escríbeme una invitación",
+  "mándale un mensaje a esta persona", "mensaje de prospección", "¿cómo hago
+  el seguimiento?", o quiera contactar con alguien concreto en LinkedIn.
 ---
 
 # li-dm
 
-The invite note is 200 characters. The first DM decides whether there is a
-second one. Neither is a pitch.
+La nota de invitación tiene 200 caracteres. El primer mensaje decide si habrá
+un segundo. Ninguno de los dos es una venta.
 
-## Before writing, get the specifics
+## Antes de escribir, consigue lo concreto
 
-Ask for, in one batched question:
+Pide, en una sola pregunta agrupada:
 
-1. **Who** - name, role, company.
-2. **The hook** - the actual reason to reach out now. A post they wrote, a
-   thing their company shipped, a mutual connection, a talk they gave. Not
-   "they fit my ICP".
-3. **What the user wants** - a conversation, a referral, a job, a sale. Be
-   honest internally, even if the message does not lead with it.
+1. **Quién**: nombre, cargo, empresa.
+2. **El motivo**: la razón real para escribir ahora. Un post suyo, algo que ha
+   lanzado su empresa, un contacto en común, una charla que dio. No "encaja en
+   mi cliente ideal".
+3. **Qué quiere el usuario**: una conversación, una recomendación, un trabajo,
+   una venta. Sé honesto por dentro, aunque el mensaje no empiece por ahí.
 
-If there is no specific reason to message this person today, say so. A message
-with no reason is what everyone else sends, and it is why their reply rate is
-2%.
+Si no hay ningún motivo concreto para escribir hoy a esta persona, dilo. Un
+mensaje sin motivo es lo que manda todo el mundo, y por eso les contesta el
+2 %.
 
-## The invite note (200 characters)
+## Registro
+
+En LinkedIn España **se tutea**, también en B2B: tecnología, consultoría,
+marketing, startups. El "usted" solo tiene sentido con cargos muy sénior de
+sectores muy tradicionales (banca de inversión, administración, algunos
+despachos), y aun así se pasa al tú en cuanto la otra persona tutea. Si
+`voice.md` dice que el público está en Latinoamérica, respeta su variante. Lo
+que nunca se hace es mezclar tú y usted en el mismo mensaje: es la señal clásica
+de plantilla traducida.
+
+## La nota de invitación (200 caracteres)
 
 ```
-{one specific reference to them} + {one line of who you are} + {no ask}
+{una referencia concreta a esa persona} + {una línea de quién eres} + {sin pedir nada}
 ```
 
-The note asks for nothing. It exists to make the accept obvious. Under 200
-characters including spaces - count them and show the count.
+La nota no pide nada. Existe para que aceptar sea obvio. Menos de 200
+caracteres con espacios: cuéntalos y enseña el recuento. (200 es el límite de
+las cuentas gratuitas, que además tienen un cupo mensual de notas
+personalizadas; si el contador de LinkedIn del usuario marca otra cifra, manda
+la suya.)
 
 ```
-Saw your post on killing the discovery call - we did the same thing in March
-and it worked. I run ops at a 12-person studio. Would like to follow along.
-                                                                    [187/200]
+Vi tu post sobre quitar la llamada de descubrimiento. Nosotros la quitamos en
+marzo y las ventas no bajaron, al revés. Llevo operaciones en un estudio
+pequeño. Te sigo.
+                                                                    [168/200]
 ```
 
-## The first message, after they accept
+## El primer mensaje, cuando acepte
 
-Wait a day. Then:
+Espera un día. Después:
 
-- **Two to four sentences.** A screen of text is a delete.
-- **Reference the specific thing** from the note - continuity is the whole
-  reason the note was specific.
-- **Give something before asking.** A number, a template, a name, an answer.
-- **One ask, and make it small.** "Worth a 15-minute call?" beats "let me walk
-  you through our platform".
-- **No calendar link in message one.** It reads as a funnel, because it is.
+- **De dos a cuatro frases.** Una pantalla de texto es un "borrar".
+- **Retoma lo concreto** de la nota: la continuidad es la razón de que la nota
+  fuera concreta.
+- **Da algo antes de pedir.** Una cifra, una plantilla, un nombre, una
+  respuesta.
+- **Una sola petición, y pequeña.** "¿Te cuadra una llamada de 15 minutos?"
+  gana a "déjame enseñarte nuestra plataforma".
+- **Nada de enlace a tu agenda en el primer mensaje.** Se lee como un embudo,
+  porque lo es.
 
-## Follow-ups
+## Seguimientos
 
-Two. That is the number.
+Dos. Ese es el número.
 
-- **+4 days** - add something new. Never "just bumping this" or "following up
-  on my last message". If you have nothing new, you have no follow-up.
-- **+10 days** - the close-the-loop message. Say you will stop, and mean it.
-  This one gets a surprising share of the total replies, because it removes
-  the pressure.
+- **A los 4 días**: añade algo nuevo. Nunca "solo quería hacer seguimiento" ni
+  "te escribo de nuevo por si no viste mi mensaje". Si no tienes nada nuevo, no
+  tienes seguimiento.
+- **A los 10 días**: el mensaje de cierre. Di que no vas a insistir más, y
+  cúmplelo. Este se lleva una parte sorprendente de las respuestas, porque
+  quita la presión.
 
-Then stop. A third follow-up converts nobody and costs the relationship.
+Y para. Un tercer seguimiento no convierte a nadie y le cuesta la relación.
 
-## Never
+## Lo que en España suena a spam
 
-- Never send an automated connection or message sequence. Automated outreach
-  tools violate LinkedIn's User Agreement and get accounts restricted.
-- Never fabricate a mutual connection, a shared school, or having read
-  something the user has not read.
-- Never write the message that opens "I hope this message finds you well".
-- Never send more than 20 invites a day. Beyond that, LinkedIn throttles the
-  account, and a throttled account is a dead one.
+- "Estimado/a" + nombre completo, o "Buenos días, Sr. García" en LinkedIn.
+- "Espero que este mensaje te encuentre bien": calco directo del inglés.
+- "¡Me encanta tu perfil!" sin decir qué.
+- "¿Tienes 5 minutos?" sin decir para qué.
+- Venta en la nota de invitación, antes de que te acepten.
+- Enlaces externos, audios o vídeos sin pedir en el primer contacto.
+- "Sinergias", "aportar valor", "explorar oportunidades de colaboración".
 
-## Output
+## Nunca
 
-The invite note with its character count, the first message, and both
-follow-ups with the day they go out. All humanized through `/li-human`. The
-user sends every one of them by hand.
+- Nunca mandes secuencias automáticas de invitaciones o mensajes. Las
+  herramientas de prospección automática incumplen las Condiciones de uso de
+  LinkedIn y hacen que restrinjan las cuentas.
+- Nunca inventes un contacto en común, una universidad compartida o que el
+  usuario ha leído algo que no ha leído.
+- Nunca mandes más de 20 invitaciones al día. A partir de ahí LinkedIn limita
+  la cuenta, y una cuenta limitada está muerta.
+
+## Salida
+
+La nota de invitación con su recuento de caracteres, el primer mensaje y los
+dos seguimientos con el día en que salen. Todo pasado por `/li-human`. El
+usuario los manda todos a mano.

@@ -1,67 +1,67 @@
 {
-  "version": "1.0",
+  "version": "1.0-es",
   "total": 100,
-  "note": "Twelve items. Score each honestly - a generous score helps nobody. Most first-pass profiles land in the 30s and 40s.",
+  "note": "Doce apartados. Puntúa cada uno con honestidad: una nota generosa no ayuda a nadie. La mayoría de perfiles se quedan entre 30 y 49 en la primera pasada.",
   "items": [
     {
-      "id": "headline",
+      "id": "titular",
       "points": 12,
-      "full_marks": "States who you help and what changes for them, carries one piece of proof, and is not the job title. Uses the 220 characters, not 60."
+      "full_marks": "Dice a quién ayudas y qué cambia para esa persona, lleva una prueba concreta y no es el cargo. Aprovecha los 220 caracteres, no 60. Sin \"Apasionado/a de\" ni \"Ayudo a X a Y\" como primeras palabras."
     },
     {
-      "id": "about_open",
+      "id": "extracto_inicio",
       "points": 10,
-      "full_marks": "First two lines - everything visible before 'see more' - name the reader's problem. No 'passionate about', no third-person bio, no opening with your own name."
+      "full_marks": "Las dos primeras líneas, todo lo que se ve antes del \"...ver más\", nombran el problema del lector. Sin \"apasionado/a por\", sin \"orientado/a a resultados\", sin biografía en tercera persona y sin empezar por tu propio nombre."
     },
     {
-      "id": "about_body",
+      "id": "extracto_cuerpo",
       "points": 10,
-      "full_marks": "Written to one person in second person: their problem, what you do, one number as proof, what to do next. Under 1,400 characters."
+      "full_marks": "Escrito a una sola persona, tuteando: su problema, lo que haces tú, una cifra como prueba y qué hacer después. Menos de 1.400 caracteres."
     },
     {
-      "id": "featured",
+      "id": "destacados",
       "points": 8,
-      "full_marks": "Three items: best-performing post, a proof asset, and the way to contact you. Nothing empty, nothing stale."
+      "full_marks": "Tres elementos: el post que mejor ha funcionado, una prueba (caso, resultado, reseña) y la forma de contactar contigo. Nada vacío ni caducado."
     },
     {
       "id": "banner",
       "points": 6,
-      "full_marks": "One line of positioning and one way to reach you. Not the default gradient, not a stock skyline."
+      "full_marks": "Una línea de posicionamiento y una forma de contactarte. Ni el degradado por defecto ni una foto de stock de rascacielos."
     },
     {
-      "id": "photo",
+      "id": "foto",
       "points": 6,
-      "full_marks": "Face fills roughly 60% of the frame, eyes visible, shot in the last two years, background not distracting."
+      "full_marks": "La cara ocupa alrededor del 60 % del encuadre, se ven los ojos, foto de los dos últimos años y fondo que no distrae."
     },
     {
-      "id": "current_role",
+      "id": "puesto_actual",
       "points": 10,
-      "full_marks": "One line of scope, then two to three outcome bullets with numbers. Duties are not outcomes."
+      "full_marks": "Una línea de alcance y luego dos o tres viñetas de resultados con cifras. Las funciones no son resultados."
     },
     {
-      "id": "experience_depth",
+      "id": "experiencia",
       "points": 8,
-      "full_marks": "Last two roles detailed, everything older than ten years compressed to a single line each."
+      "full_marks": "Los dos últimos puestos detallados; todo lo de hace más de diez años, reducido a una línea por puesto."
     },
     {
-      "id": "skills",
+      "id": "aptitudes",
       "points": 6,
-      "full_marks": "Top three skills are the three you want to be hired for and are endorsed. The other 47 are noise."
+      "full_marks": "Las tres aptitudes principales son las tres por las que quieres que te contraten y tienen validaciones. Las otras 47 son ruido."
     },
     {
-      "id": "recommendations",
+      "id": "recomendaciones",
       "points": 8,
-      "full_marks": "At least three received in the last two years, each naming a specific outcome rather than character."
+      "full_marks": "Al menos tres recibidas en los dos últimos años, y cada una nombra un resultado concreto, no solo el carácter."
     },
     {
-      "id": "activity",
+      "id": "actividad",
       "points": 10,
-      "full_marks": "Posted or commented in the last seven days. An empty activity feed reads as an abandoned profile."
+      "full_marks": "Ha publicado o comentado en los últimos siete días. Una actividad vacía se lee como perfil abandonado."
     },
     {
-      "id": "contact",
+      "id": "contacto",
       "points": 6,
-      "full_marks": "Custom URL, a working email or booking link in contact info, and the same handle as your other platforms."
+      "full_marks": "URL personalizada, un correo o enlace de reserva que funcione en la información de contacto, y el mismo nombre de usuario que en tus otras redes."
     }
   ]
 }

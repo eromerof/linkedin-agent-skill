@@ -1,71 +1,78 @@
 ---
 name: li-repurpose
 description: >-
-  Turn one long asset - a YouTube video, podcast, newsletter, blog post,
-  transcript or client call - into a week of LinkedIn posts. Use when the user
-  says "repurpose this", "turn this into posts", "I have a video/newsletter/
-  transcript", or pastes a long piece of content and wants it on LinkedIn.
+  Convierte un contenido largo (un vídeo de YouTube, un pódcast, una
+  newsletter, un artículo, una transcripción o una llamada con un cliente) en
+  una semana de posts de LinkedIn en español. Úsala cuando el usuario diga
+  "reaprovecha esto", "sácame posts de aquí", "tengo un vídeo, una newsletter
+  o una transcripción", o pegue un contenido largo y lo quiera en LinkedIn.
 ---
 
 # li-repurpose
 
-One good long asset contains four to six posts. Most people extract one and
-throw the rest away.
+Un buen contenido largo tiene dentro de cuatro a seis posts. Casi todo el mundo
+saca uno y tira el resto.
 
-## Input
+## Entrada
 
-A transcript, an article, a newsletter, a script, a call summary. If the user
-gives a YouTube URL and there is a transcript tool available in the session,
-use it; otherwise ask them to paste the text. Read the whole thing before
-extracting anything.
+Una transcripción, un artículo, una newsletter, un guion, el resumen de una
+llamada. Si el usuario da una URL de YouTube y hay una herramienta de
+transcripción en la sesión, úsala; si no, pídele que pegue el texto. Léelo
+entero antes de extraer nada.
 
-## Extract, do not summarise
+Si el original está en inglés, no lo traduzcas: extrae las ideas y escribe los
+posts directamente en español, con ejemplos, cifras y referencias que tengan
+sentido para el público del usuario (euros, empresas y contexto de España si
+`voice.md` no dice otra cosa). Una traducción se nota en la primera línea.
 
-A summary of a video is not a post. Nobody wants the summary. Go through the
-asset and pull out the things that stand alone:
+## Extrae, no resumas
 
-| pull | what it is |
+El resumen de un vídeo no es un post. Nadie quiere el resumen. Repasa el
+contenido y saca lo que se sostiene solo:
+
+| qué sacar | qué es |
 | --- | --- |
-| **Claims** | every sentence that would start an argument |
-| **Numbers** | every figure, cost, duration, percentage |
-| **Stories** | every moment with a person, a scene and a cost |
-| **Mechanisms** | every "the way this works is..." explanation |
-| **Mistakes** | every admission of something that went wrong |
-| **Lines** | every sentence that is already quotable as-is |
+| **Afirmaciones** | cada frase que empezaría una discusión |
+| **Cifras** | cada número, coste, duración, porcentaje |
+| **Historias** | cada momento con una persona, una escena y un coste |
+| **Mecanismos** | cada "esto funciona así..." |
+| **Errores** | cada vez que se admite que algo salió mal |
+| **Frases** | cada frase que ya se puede citar tal cual |
 
-List what you found, with counts, before writing anything. If the asset yields
-fewer than four items, it is thin, and four posts squeezed out of it will be
-thin too. Say that.
+Haz la lista de lo encontrado, con totales, antes de escribir nada. Si salen
+menos de cuatro elementos, el contenido es flojo, y cuatro posts estrujados de
+ahí también lo serán. Dilo.
 
-## Then build the week
+## Después, monta la semana
 
-Each extract becomes one post, and each post has to stand completely on its
-own - the reader has not seen the video and never will. Never write "as I
-mentioned in my latest video". The post is the thing.
+Cada elemento se convierte en un post, y cada post tiene que sostenerse solo:
+el lector no ha visto el vídeo y no lo verá. Nunca escribas "como comentaba en
+mi último vídeo". El post es la cosa.
 
-Assign a hook formula from `li-post/hooks.json` to each, and vary them: five
-posts from one source with the same hook shape reads as a content mill.
+Asigna a cada uno una fórmula de gancho de `li-post/hooks.json`, y varíalas:
+cinco posts de la misma fuente con el mismo gancho suenan a fábrica de
+contenido.
 
-Order them across the week so the strongest claim goes first, the story goes
-midweek, and the mechanism post goes last, when people who liked the earlier
-ones are watching for it.
+Ordénalos en la semana para que la afirmación más fuerte vaya primero, la
+historia a mitad de semana y el mecanismo al final, cuando quien vio los
+anteriores ya lo está esperando.
 
-## Output
+## Salida
 
 ```
-SOURCE: "Why we killed discovery calls" (18 min, 3,400 words)
+FUENTE: "Por qué quitamos las llamadas de descubrimiento" (18 min, 3.400 palabras)
 
-FOUND  4 claims, 6 numbers, 2 stories, 3 mechanisms, 1 mistake, 5 quotable lines
+ENCONTRADO  4 afirmaciones, 6 cifras, 2 historias, 3 mecanismos, 1 error, 5 frases citables
 
-WEEK
-TUE  #1  Contrarian    Discovery calls are a tax you pay for a bad website
-WED  #17 Time Anchor   We got 6 hours a week back by deleting one calendar link
-THU  #9  Cold Open     "Can we just hop on a quick call?"
-FRI  #21 Direct Value  The 4-question form that replaced the call. Steal it.
+SEMANA
+MAR  #1  A contracorriente   Las llamadas de descubrimiento son el impuesto de tener una web mala
+MIÉ  #17 El ancla de tiempo  Recuperamos 6 horas a la semana quitando un enlace de agenda
+JUE  #9  Arranque en frío    "¿Hacemos una llamada rápida?"
+VIE  #21 El regalo directo   El formulario de 4 preguntas que sustituyó a la llamada. Cógelo.
 
-Say "write Tuesday" and I will draft it.
+Di "escribe el martes" y te lo redacto.
 ```
 
-Then draft on request, one at a time, each through `/li-post` and `/li-human`.
-Do not dump four finished posts at once - they will all sound the same, and
-the user will edit none of them.
+Después redacta bajo petición, de uno en uno, cada uno pasando por `/li-post`
+y `/li-human`. No sueltes cuatro posts terminados de golpe: sonarán todos igual
+y el usuario no editará ninguno.

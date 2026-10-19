@@ -1,94 +1,109 @@
 ---
 name: li-plan
 description: >-
-  Build the week on LinkedIn - what to post, when to post it, and who to engage
-  with. Use when the user says "plan my week", "what should I post", "content
-  calendar", "I have nothing to post about", or wants a posting schedule and an
-  engagement list.
+  Planifica la semana en LinkedIn: qué publicar, cuándo publicarlo (en horario
+  de España por defecto) y con quién interactuar. Úsala cuando el usuario diga
+  "planifícame la semana", "¿qué publico?", "calendario de contenidos", "no sé
+  de qué escribir", o quiera un calendario de publicación y una lista de
+  personas con las que interactuar.
 ---
 
 # li-plan
 
-The control room. Everything else in this pack executes; this decides what
-gets executed. Run it once a week, on the same day.
+La sala de control. El resto del paquete ejecuta; esta decide qué se ejecuta.
+Úsala una vez por semana, siempre el mismo día.
 
-## Input
+## Entrada
 
-If `~/.claude/linkedin/voice.md` and `log.md` exist, read them - the plan
-should not repeat a theme from the last fortnight. If they do not exist, ask
-for four things and write them down:
+Si existen `~/.claude/linkedin/voice.md` y `log.md`, léelos: el plan no debe
+repetir un tema de las dos últimas semanas. Si no existen, pide cuatro cosas y
+apúntalas:
 
-1. What the user sells, and to whom.
-2. The three or four themes they want to be known for.
-3. What actually happened this week - a client call, a number, a mistake, a
-   thing they built, an argument they had. This is where posts come from.
-4. Ten to twenty people or companies worth being visible to.
+1. Qué vende el usuario y a quién.
+2. Los tres o cuatro temas por los que quiere que le conozcan.
+3. Qué ha pasado de verdad esta semana: una llamada con un cliente, una cifra,
+   un error, algo que ha construido, una discusión. De ahí salen los posts.
+4. Entre diez y veinte personas o empresas ante las que le interesa dejarse
+   ver.
 
-## What to post
+## Qué publicar
 
-Four posts a week beats seven. Consistency is a floor, not a target, and the
-fifth post of a week is almost always the weak one that drags the average.
+Cuatro posts por semana ganan a siete. La constancia es un suelo, no un
+objetivo, y el quinto post de la semana casi siempre es el flojo que baja la
+media.
 
-Mix across the week, never two of the same type back to back:
+Reparte a lo largo de la semana, nunca dos del mismo tipo seguidos:
 
-| type | share | job |
+| tipo | cuántos | para qué |
 | --- | --- | --- |
-| **Proof** | 1 per week | something that happened, with a number |
-| **Opinion** | 1 per week | a position that could lose you followers |
-| **Teach** | 1 per week | one thing the reader can do today |
-| **Story** | 1 per fortnight | a scene with dialogue and a cost |
-| **Offer** | 1 per fortnight | what you sell, said plainly, no apology |
+| **Prueba** | 1 por semana | algo que pasó, con una cifra |
+| **Opinión** | 1 por semana | una postura que podría costarte seguidores |
+| **Enseñar** | 1 por semana | una cosa que el lector puede hacer hoy |
+| **Historia** | 1 cada dos semanas | una escena con diálogo y un coste |
+| **Oferta** | 1 cada dos semanas | lo que vendes, dicho claro, sin pedir perdón |
 
-For each slot give: the theme, the specific angle drawn from what actually
-happened this week, and the hook formula number from `li-post/hooks.json` that
-fits it. Not a topic - an angle. "AI" is not a plan. "The proposal we lost
-because our AI draft had an em dash in it" is a post.
+Para cada hueco da: el tema, el ángulo concreto sacado de lo que pasó esta
+semana y el número de la fórmula de gancho de `li-post/hooks.json` que encaja.
+No un tema: un ángulo. "IA" no es un plan. "El presupuesto que perdimos porque
+el borrador de la IA tenía una raya en cada párrafo" es un post.
 
-## When to post
+## Cuándo publicar
 
-Post when the user's audience is at a desk. For a B2B audience in one
-timezone, Tuesday to Thursday, 7:30-9:30am local, is the working default, with
-Monday afternoon and Friday morning as the second tier. Weekends are for
-personal-story posts or nothing.
+Publica cuando tu público está en la mesa de trabajo. Para un público B2B en
+España, la referencia es **de martes a jueves, de 9:00 a 12:00**, con el pico
+el jueves sobre las 11:00 y el miércoles y el viernes por la mañana justo
+detrás (Metricool, estudio de LinkedIn 2026). Con el horario español, después
+de las 14:00 se come y la actividad cae; el viernes por la tarde y el fin de
+semana son para historias personales o para nada.
 
-But state this plainly: **the day and hour matter far less than whether the
-first line is good.** If the user is optimising posting times before their
-hooks work, they are polishing the wrong thing, and you should say so.
+Calendario español: en agosto, en Semana Santa y en los puentes la actividad
+baja mucho. Planifica menos posts esas semanas y guárdate los fuertes para
+septiembre y la vuelta de vacaciones.
 
-Anchor the times to their audience's timezone, not the user's, if those
-differ.
+Si el público está en Latinoamérica, usa la misma franja de media mañana en su
+hora local (según la época del año, Ciudad de México va 7-8 horas por detrás
+de Madrid; Bogotá, 6-7; Buenos Aires, 4-5) y avisa de que es una referencia sin datos propios del país. Ancla siempre
+la hora a la zona horaria del público, no a la del usuario, si son distintas.
 
-## Who to engage with
+Pero dilo claro: **el día y la hora importan mucho menos que una buena primera
+línea.** Si el usuario está optimizando horarios antes de que le funcionen los
+ganchos, está puliendo lo que no es, y tienes que decírselo.
 
-Build a list of 10, split three ways:
+## Con quién interactuar
 
-- **5 reach** - people with an audience the user wants, whose posts they can
-  genuinely add to. Comment before they have 20 comments or nobody sees it.
-- **3 peers** - same level, same field. This is the group that reciprocates.
-- **2 buyers** - people who could actually buy. Comment on their posts for
-  weeks before any DM, and never pitch in a comment.
+Haz una lista de 10, repartida en tres:
 
-20 minutes a day, before posting, not after. Comments on other people's posts
-are what makes the user's own post land.
+- **5 de alcance**: gente con el público que el usuario quiere, en cuyos posts
+  puede aportar de verdad. Comenta antes de que tengan 20 comentarios o no te
+  verá nadie.
+- **3 colegas**: mismo nivel, mismo sector. Es el grupo que devuelve la
+  interacción.
+- **2 compradores**: gente que podría comprar de verdad. Comenta en sus posts
+  durante semanas antes de cualquier mensaje privado, y nunca vendas en un
+  comentario.
 
-## Output
+20 minutos al día, antes de publicar, no después. Los comentarios en posts de
+otros son lo que hace que el post propio funcione.
+
+## Salida
 
 ```
-WEEK OF SEP 8
+SEMANA DEL 8 DE SEPTIEMBRE
 
-MON  engage only  (20 min, list below)
-TUE  8:15am  PROOF    #17 Time Anchor   - the 5hr -> 20min proposal rebuild
-WED  engage only
-THU  8:00am  OPINION  #1  Contrarian    - why we killed the discovery call
-FRI  8:30am  TEACH    #21 Direct Value  - the 4-line reopen email, given away
-SAT  -
-SUN  4:00pm  STORY    #9  Cold Open     - the "going with someone cheaper" email
+LUN  solo interactuar  (20 min, lista abajo)
+MAR  9:30   PRUEBA     #17 El ancla de tiempo  - de 5 h a 20 min en cada presupuesto
+MIÉ  solo interactuar
+JUE  11:00  OPINIÓN    #1  A contracorriente   - por qué quitamos la llamada de descubrimiento
+VIE  10:00  ENSEÑAR    #21 El regalo directo   - el correo de 4 líneas para reabrir ventas, entero
+SÁB  -
+DOM  18:00  HISTORIA   #9  Arranque en frío    - el correo de "nos vamos con alguien más barato"
 
-ENGAGE  (5 reach / 3 peers / 2 buyers)
+INTERACTUAR  (5 alcance / 3 colegas / 2 compradores)
   ...
 
-Say "write Tuesday" and I will draft it.
+Di "escribe el martes" y te lo redacto.
 ```
 
-Write the plan to `~/.claude/linkedin/plan.md` so the other skills can read it.
-Nothing is scheduled or posted anywhere - this is a plan, and the user runs it.
+Escribe el plan en `~/.claude/linkedin/plan.md` para que lo lean las demás
+skills. No se programa ni se publica nada en ningún sitio: esto es un plan, y
+lo ejecuta el usuario.

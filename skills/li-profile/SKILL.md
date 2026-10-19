@@ -1,80 +1,86 @@
 ---
 name: li-profile
 description: >-
-  Score a LinkedIn profile out of 100 against a 12-part rubric and rewrite the
-  parts that lose points - headline, about, experience, featured, banner. Use
-  when the user says "optimize my profile", "score my LinkedIn", "rewrite my
-  headline", "fix my about section", or pastes their profile and asks how it
-  reads.
+  Puntúa un perfil de LinkedIn sobre 100 con una rúbrica de 12 apartados y
+  reescribe en español lo que pierde puntos: titular, extracto (Acerca de),
+  experiencia, destacados y banner. Úsala cuando el usuario diga "optimiza mi
+  perfil", "puntúa mi LinkedIn", "reescríbeme el titular", "arregla mi
+  extracto", o pegue su perfil y pregunte qué tal se lee.
 ---
 
 # li-profile
 
-A profile is not a resume. A resume answers "what have you done". A profile
-answers "should I message this person", and it answers it in about four
-seconds, from the headline and the first two lines of the about.
+Un perfil no es un CV. Un CV responde a "¿qué has hecho?". Un perfil responde a
+"¿debería escribirle a esta persona?", y lo responde en unos cuatro segundos,
+con el titular y las dos primeras líneas del extracto.
 
-## Input
+## Entrada
 
-Ask the user to paste: headline, about section, current role and the last two
-experience entries, plus whether they have a banner and featured section. A
-screenshot of the top card is enough for the first pass. Do not log into
-LinkedIn on their behalf.
+Pide al usuario que pegue: titular, extracto ("Acerca de"), puesto actual y las
+dos últimas experiencias, y si tiene banner y sección de destacados. Para la
+primera pasada basta con una captura de la cabecera. No entres en LinkedIn en
+su nombre.
 
-## Score it
+## Puntúalo
 
-Read `rubric.json` in this folder. Twelve items, 100 points, each with what
-full marks looks like. Score every item, show the table, and give the total.
-Be honest - most profiles land in the 30s and 40s on the first pass, and a
-generous score is useless.
+Lee `rubric.json` en esta carpeta. Doce apartados, 100 puntos, cada uno con lo
+que significa la nota máxima. Puntúa todos, enseña la tabla y da el total. Sé
+honesto: la mayoría de perfiles sacan entre 30 y 49 la primera vez, y una nota
+generosa no sirve de nada.
 
 ```
-PROFILE SCORE  41/100
+NOTA DEL PERFIL  41/100
 
-  headline            3/12   job title only, no outcome, no audience
-  about first 2 lines 2/10   opens with "passionate about"
-  about body          4/10   history, not offer
-  featured            0/8    empty
-  banner              0/6    default blue
+  titular              3/12   solo el cargo, sin resultado ni público
+  extracto, inicio     2/10   empieza por "Apasionado por"
+  extracto, cuerpo     4/10   trayectoria, no oferta
+  destacados           0/8    vacío
+  banner               0/6    el azul por defecto
   ...
 ```
 
-## Then rewrite, in this order
+## Después, reescribe en este orden
 
-Fix in descending order of points lost. Do not rewrite everything at once -
-the user has to actually paste each of these in.
+Arregla de más a menos puntos perdidos. No lo reescribas todo de golpe: el
+usuario tiene que pegar cada parte él mismo.
 
-**1. Headline (220 characters).** The formula that works:
-`{what you do for whom} | {proof} | {how to start}`. Not your job title. Not
-"Helping X do Y" as the first three words, which every second profile now
-opens with. Give three options.
+**1. Titular (220 caracteres).** La fórmula que funciona:
+`{qué haces y para quién} | {prueba} | {cómo empezar}`. No es tu cargo. Y no
+empieces por "Ayudo a X a Y", que es como arranca ya un perfil de cada dos.
+Evita también "Apasionado/a de", "Experto/a en" sin prueba, y las barras con
+cinco cargos ("CEO | Speaker | Mentor | Inversor | Padre"). Da tres opciones.
 
-**2. About, first two lines.** Everything after line 2 is behind "see more" on
-mobile, so those two lines are the whole about section for most readers. They
-must state who you help and what changes. No "passionate", no "results-driven",
-no third-person bio, no opening with your own name.
+**2. Extracto, primeras dos líneas.** Todo lo que va después de la segunda
+línea queda detrás del "...ver más" en el móvil, así que esas dos líneas son el
+extracto entero para la mayoría. Tienen que decir a quién ayudas y qué cambia.
+Sin "apasionado", sin "orientado a resultados", sin "proactivo", sin biografía
+en tercera persona y sin empezar por tu nombre.
 
-**3. About body.** Written to one reader, in the second person. Structure:
-the problem they have, what you do about it, one piece of proof with a number,
-what to do next. Under 1,400 characters even though the limit is 2,600.
+**3. Extracto, cuerpo.** Escrito a un solo lector, tuteando (salvo que
+`voice.md` diga otra cosa). Estructura: el problema que tiene, lo que haces tú,
+una prueba con una cifra en formato español (1.200 clientes, un 35 %, 4.200 €),
+y qué hacer a continuación. Menos de 1.400 caracteres aunque el límite sea
+2.600.
 
-**4. Featured.** Three items: the best post, the proof asset, the way to
-contact. An empty featured section is eight points and the only place on the
-profile you fully control.
+**4. Destacados.** Tres elementos: tu mejor post, la prueba y la forma de
+contactar. Una sección vacía son ocho puntos, y es el único sitio del perfil
+que controlas del todo.
 
-**5. Experience.** Each role gets one line of scope and two to three bullets
-that are outcomes with numbers, not duties. Cut anything older than ten years
-to a single line.
+**5. Experiencia.** Cada puesto lleva una línea de alcance y de dos a tres
+viñetas que son resultados con cifras, no funciones. Todo lo de hace más de
+diez años, a una sola línea.
 
-**6. Banner.** One sentence of positioning and one way to reach you. The
-default blue gradient is the clearest signal on the page that nobody is home.
+**6. Banner.** Una frase de posicionamiento y una forma de contactarte. El
+degradado azul por defecto es la señal más clara de la página de que no hay
+nadie en casa.
 
-## Output
+## Salida
 
-Score table, then the rewrites as copy-ready blocks in fix-first order, each
-one already run through `/li-human`. Re-score at the end and show the delta
-honestly - if the rewrite gets to 88 and not 98, say 88, and say what the
-remaining points need (usually recommendations, a real banner and posting
-history, none of which a rewrite can create).
+La tabla de puntuación y después las reescrituras como bloques listos para
+copiar, en orden de prioridad, cada uno ya pasado por `/li-human`. Vuelve a
+puntuar al final y enseña la diferencia con honestidad: si la reescritura llega
+a 88 y no a 98, di 88, y di qué necesitan los puntos que faltan (normalmente
+recomendaciones, un banner de verdad y un historial de publicaciones, nada de
+lo cual se arregla reescribiendo).
 
-Nothing is saved to LinkedIn by this skill. The user pastes each section in.
+Esta skill no guarda nada en LinkedIn. El usuario pega cada sección.

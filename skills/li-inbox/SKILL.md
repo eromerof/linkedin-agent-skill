@@ -1,67 +1,74 @@
 ---
 name: li-inbox
 description: >-
-  Triage the LinkedIn inbox - sort connection requests and DMs into leads,
-  recruiters, peers and spam, and draft the replies worth sending. Use when the
-  user says "my inbox is a mess", "triage my DMs", "should I reply to this",
-  pastes a batch of LinkedIn messages, or is drowning in connection requests.
+  Ordena la bandeja de entrada de LinkedIn: clasifica invitaciones y mensajes
+  en clientes, reclutadores, colegas, peticiones y spam, y redacta en español
+  las respuestas que merece la pena mandar. Úsala cuando el usuario diga
+  "tengo la bandeja hecha un desastre", "ordena mis mensajes", "¿contesto a
+  esto?", pegue una tanda de mensajes de LinkedIn o esté ahogado en
+  invitaciones.
 ---
 
 # li-inbox
 
-Most LinkedIn inboxes are 80% noise, and the cost of that noise is that the
-20% goes unanswered for a week. This skill separates them, then writes only
-what is worth writing.
+La mayoría de bandejas de LinkedIn son un 80 % ruido, y el precio de ese ruido
+es que el 20 % que importa se queda una semana sin respuesta. Esta skill los
+separa y luego escribe solo lo que merece la pena.
 
-## Input
+## Entrada
 
-The user pastes the messages. Screenshots are fine. Do not log into their
-account or read their inbox with a browser tool.
+El usuario pega los mensajes. Las capturas valen. No entres en su cuenta ni
+leas la bandeja con un navegador.
 
-## Sort into five
+## Clasifica en cinco
 
-| bucket | signal | action |
+| grupo | señal | acción |
 | --- | --- | --- |
-| **LEAD** | describes a problem the user solves, or asks about working together | reply today, full answer |
-| **RECRUITER** | a role, a company, a salary band | reply if the role is real, one line if not |
-| **PEER** | someone in the same field with something to say | reply this week, keep it human |
-| **ASK** | wants advice, time, an intro, a favour | reply if it is cheap and specific, decline cleanly if not |
-| **SPAM** | agency pitch, lead-gen sequence, crypto, "quick question" with no question | archive, no reply |
+| **CLIENTE** | describe un problema que el usuario resuelve, o pregunta por trabajar juntos | contestar hoy, respuesta completa |
+| **RECLUTADOR** | un puesto, una empresa, una banda salarial | contestar si el puesto es real; una línea si no |
+| **COLEGA** | alguien del mismo sector con algo que decir | contestar esta semana, en tono humano |
+| **PETICIÓN** | quiere consejo, tiempo, una presentación, un favor | contestar si es poco y concreto; declinar limpio si no |
+| **SPAM** | agencia vendiendo, secuencia de captación, cripto, "una pregunta rápida" sin pregunta | archivar, sin respuesta |
 
-Print the counts first. Seeing "3 leads, 2 recruiters, 41 spam" is most of the
-value.
+Da primero los totales. Ver "3 clientes, 2 reclutadores, 41 spam" ya es la
+mitad del valor.
 
-## Detecting a sequence
+## Detectar una secuencia
 
-Automated outreach has a shape: an invite note with no specifics, a message
-that arrives within minutes of the accept, "quick question", "I noticed you're
-in {industry}", a calendar link in message one, then a bump exactly four days
-later. When you see it, mark it SPAM and say which tell gave it away. The user
-does not owe a reply to a script.
+La prospección automática tiene una forma: nota de invitación sin nada
+concreto, un mensaje que llega a los pocos minutos de aceptar, "una pregunta
+rápida", "he visto que trabajas en {sector}", "me encantaría explorar
+sinergias", un enlace a la agenda en el primer mensaje, y un "¿pudiste ver mi
+mensaje?" justo cuatro días después. Delata mucho también un "Hola {Nombre}"
+con el nombre completo y en mayúsculas, o un "usted" y un "tú" mezclados.
+Cuando lo veas, márcalo como SPAM y di qué detalle lo delató. El usuario no le
+debe una respuesta a un script.
 
-## Replies
+## Respuestas
 
-- **LEAD** - answer the actual question in the message, in full, for free. If
-  it is a fit, the offer is one sentence at the end. If it is not, say so and
-  point them somewhere useful. Both outcomes are good.
-- **RECRUITER** - if the role is genuinely interesting, ask the three things
-  the message left out: comp band, level, and whether it is in-office. If it
-  is not, one line: not looking, happy to refer, and mean the refer.
-- **ASK** - if it costs under ten minutes and is specific, do it. If it is
-  "can I pick your brain", decline in one warm sentence and give them the one
-  answer you would have given on the call. That is the polite version and it
-  is also the more useful one.
-- **DECLINES** are short, warm and final. No "let's revisit in Q3" if there is
-  no Q3.
+- **CLIENTE**: responde a lo que pregunta en el mensaje, entero, gratis. Si
+  encaja, la oferta es una frase al final. Si no encaja, dilo y mándale a algún
+  sitio útil. Las dos salidas son buenas.
+- **RECLUTADOR**: si el puesto interesa de verdad, pregunta las tres cosas que
+  el mensaje no dice: banda salarial bruta anual, nivel, y si es presencial,
+  híbrido o en remoto. Si no interesa, una línea: no estoy buscando, encantado
+  de recomendar a alguien, y que la recomendación vaya en serio.
+- **PETICIÓN**: si cuesta menos de diez minutos y es concreta, hazla. Si es
+  "¿te puedo robar un café para que me cuentes?", declina con una frase amable
+  y dale la respuesta que le habrías dado en el café. Es la versión educada y
+  también la más útil.
+- **LOS NOES** son cortos, amables y definitivos. Nada de "lo retomamos después
+  del verano" si no hay después del verano.
 
-## Output
+## Salida
 
-Grouped by bucket, counts first, drafts only for the buckets that get replies,
-each one humanized. Then the gate: the user sends them.
+Agrupado por tipo, totales primero, borradores solo para los grupos que llevan
+respuesta, cada uno humanizado. Y la puerta: los manda el usuario.
 
 ```
-INBOX  ·  52 items  ·  3 LEAD, 2 RECRUITER, 4 PEER, 2 ASK, 41 SPAM
+BANDEJA  ·  52 mensajes  ·  3 CLIENTE, 2 RECLUTADOR, 4 COLEGA, 2 PETICIÓN, 41 SPAM
 
-SPAM  (41) - archive. 38 are the same sequence: no-specifics invite,
-"quick question" within 4 minutes of accept, calendar link in message one.
+SPAM  (41) - archivar. 38 son la misma secuencia: invitación sin nada concreto,
+"una pregunta rápida" a los 4 minutos de aceptar, enlace a la agenda en el
+primer mensaje.
 ```
